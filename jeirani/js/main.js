@@ -2,7 +2,12 @@
 
 function actionStart(action) {
     let actions  = ['✊🏻','🤚🏻','✌🏻']
+    
     let programChose = actions[Math.floor(Math.random()*actions.length)]
+
+    // if(Number(myResult.innerHTML) < Number(programResult.innerHTML) - 2) {
+    //     programChose = "->"
+    // }
 
     programInput.innerHTML = programChose
 
@@ -15,23 +20,15 @@ function winner(one, two) {
     if(one === two) {
         console.log(0,'ფრე')
     }
-    else if(one === "✊🏻" && two === "✌🏻") {
-        console.log(1,'გამარჯვებული მე ვარ')
+    else if(
+        (one === "✊🏻" && two === "✌🏻") || 
+        (one === "🤚🏻" && two === "✊🏻") ||
+        (one === "✌🏻" && two === "🤚🏻")
+        ) {
+            myResult.innerHTML = Number(myResult.innerHTML) + 1
     }
-    else if(one === "✌🏻" && two === "✊🏻") {
-        console.log(2,'გამარჯვებულია პროგრამა')
-    }
-    else if(one === "✊🏻" && two === "🤚🏻") {
-        console.log(2,'გამარჯვებულია პროგრამა')
-    }
-    else if(one === "🤚🏻" && two === "✊🏻") {
-        console.log(1,'გამარჯვებული მე ვარ')
-    }
-    else if(one === "✌🏻" && two === "🤚🏻") {
-        console.log(1,'გამარჯვებული მე ვარ')
-    }
-    else if(one === "🤚🏻" && two === "✌🏻") {
-        console.log(2,'გამარჯვებულია პროგრამა')
+    else {
+        programResult.innerHTML = Number(programResult.innerHTML) + 1
     }
     console.log("%c--------------------", "color:green");
 }
