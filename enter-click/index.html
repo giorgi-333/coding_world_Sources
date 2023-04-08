@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeydown="rame(this)">
+
+    <script>
+        function rame(el) {
+            console.log(event.keyCode);
+            
+            if(event.keyCode === 13) {
+                alert("თქვენ დააჭირეთ ენთერს")
+            }
+            if(event.keyCode === 46) {
+                el.value = null
+            }
+        }
+    </script>
+</body>
+</html>
