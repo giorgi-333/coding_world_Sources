@@ -1,0 +1,138 @@
+@font-face {
+    font-family: oswald;
+    src: url(../font/Oswald-Light.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #292d33;
+    color: white;
+    font-family: oswald;
+}
+
+.main-header {
+    font-size: 72px;
+    margin: 10px 0 50px;
+}
+
+.cont .item {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.cont .item > img {
+    width: 235px;
+}
+
+.right-side {
+    padding-left: 25px;
+}
+
+.right-side h1 {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.right-side h2 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.right-side .btn {
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.right-side .btn:hover  {
+    background-color: white;
+    color: black;
+}
+
+/* modal */
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: #01100662; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.modal-cont {
+    border: 1px solid #ffd600;
+    border-radius: 24px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.modal-cont > h1 {
+    position: relative;
+    font-family: cursive;
+    font-size: 96px;
+    background-color: #ffd600;
+    color: black;
+    padding: 20px 100px;
+}
+
+.close {
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+    top: 3px;
+    right: 10px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.bottom .first {
+    color: black;
+    font-size: 30px;
+}
+
+.bottom .first b {
+    font-size: 80px;
+    font-family: cursive;
+}
+
+.bottom span {
+    color: rgb(153, 153, 153);
+    font-size: 18px;
+}
+
+.yallow-btn {
+    margin-top: 14px;
+    background-color: #ffd600;
+    color: black;
+    font-size: 20px;
+    font-family: fantasy;
+    font-weight: bold;
+    border-radius: 50px;
+    height: 50px;
+    line-height: 50px;
+    width: 220px;
+    text-align: center;
+}
